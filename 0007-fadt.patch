@@ -1,0 +1,10 @@
+--- orig/hw/i386/acpi-build.c
++++ qemu-2.10.1/hw/i386/acpi-build.c
+@@ -145,6 +145,7 @@
+             object_property_get_uint(obj, ACPI_PCIHP_IO_LEN_PROP, NULL);
+     }
+     if (lpc) {
++	pm->force_rev1_fadt = true;
+         obj = lpc;
+         pm->cpu_hp_io_base = ICH9_CPU_HOTPLUG_IO_BASE;
+     }
