@@ -3,8 +3,8 @@
 # Contributor: Jakub Jirutka <jakub@jirutka.cz>
 # Maintainer: Natanael Copa <ncopa@alpinelinux.org>
 pkgname=qemu
-pkgver=2.10.1
-pkgrel=3
+pkgver=2.11.0
+pkgrel=4
 pkgdesc="QEMU is a generic machine emulator and virtualizer"
 url="http://qemu.org/"
 arch="x86_64"
@@ -70,8 +70,6 @@ source="http://wiki.qemu-project.org/download/qemu-$pkgver.tar.bz2
 	xattr_size_max.patch
 	ncurses.patch
 	ignore-signals-33-and-64-to-allow-golang-emulation.patch
-	fix-sockios-header.patch
-	0007-fadt.patch
 	qemu-guest-agent.confd
 	qemu-guest-agent.initd
 	80-kvm.rules
@@ -248,7 +246,7 @@ guest() {
 		"$subpkgdir"/etc/conf.d/qemu-guest-agent
 }
 
-sha512sums="1a4a6ebf700ec6851c83cc2a71eaea8d95f14c685d094eaaa86c740eb9401e49a79074b72385f58681ca7646771a99bb6bbd9bebb39162f7220626d37ed0654f  qemu-2.10.1.tar.bz2
+sha512sums="3681700833573c0aa6283af950bfa298970056f1b44489088d8863840a7694512138321f86961ef43b256abf15eddd2612fb9cdbe3d9a358542d4e7037cc2004  qemu-2.11.0.tar.bz2
 405008589cad1c8b609eca004d520bf944366e8525f85a19fc6e283c95b84b6c2429822ba064675823ab69f1406a57377266a65021623d1cd581e7db000134fd  0001-elfload-load-PIE-executables-to-right-address.patch
 ec84b27648c01c6e58781295dcd0c2ff8e5a635f9836ef50c1da5d0ed125db1afc4cb5b01cb97606d6dd8f417acba93e1560d9a32ca29161a4bb730b302440ea  0006-linux-user-signal.c-define-__SIGRTMIN-MAX-for-non-GN.patch
 224f5b44da749921e8a821359478c5238d8b6e24a9c0b4c5738c34e82f3062ec4639d495b8b5883d304af4a0d567e38aa6623aac1aa3a7164a5757c036528ac0  musl-F_SHLCK-and-F_EXLCK.patch
@@ -256,9 +254,7 @@ ec84b27648c01c6e58781295dcd0c2ff8e5a635f9836ef50c1da5d0ed125db1afc4cb5b01cb97606
 4b1e26ba4d53f9f762cbd5cea8ef6f8062d827ae3ae07bc36c5b0c0be4e94fc1856ad2477e8e791b074b8a25d51ed6d0ddd75e605e54600e5dd0799143793ce4  xattr_size_max.patch
 b6ed02aaf95a9bb30a5f107d35371207967edca058f3ca11348b0b629ea7a9c4baa618db68a3df72199eea6d86d14ced74a5a229d17604cc3f0adedcfeae7a73  ncurses.patch
 fd178f2913639a0c33199b3880cb17536961f2b3ff171c12b27f4be6bca032d6b88fd16302d09c692bb34883346babef5c44407a6804b20a39a465bb2bc85136  ignore-signals-33-and-64-to-allow-golang-emulation.patch
-f0f99dc4f7fb475e3fab0262c0bc2c0dd8f17d77fe096c295fa1fc3e911ce07e1592f49c6ead7489246fecdd3a3f39f89ce05704af7f3fd384ce4f626f3c4601  fix-sockios-header.patch
 d90c034cae3f9097466854ed1a9f32ab4b02089fcdf7320e8f4da13b2b1ff65067233f48809911485e4431d7ec1a22448b934121bc9522a2dc489009e87e2b1f  qemu-guest-agent.confd
 316b40d97587fea717821852859d81039cfdcb276a658bb6e6fb554e321d5856a833ebb3778149c4732cea625bac320b1008d374c88a9aae35c0fb67977c01b7  qemu-guest-agent.initd
 9b7a89b20fcf737832cb7b4d5dc7d8301dd88169cbe5339eda69fbb51c2e537d8cb9ec7cf37600899e734209e63410d50d0821bce97e401421db39c294d97be2  80-kvm.rules
-749efa2e764006555b4fd3a8e2f6d1118ad2ea4d45acf99104a41a93cfe66dc9685f72027c17d8211e5716246c2a52322c962cf4b73b27541b69393cd57f53bb  bridge.conf
-610f4e8e8fd8fa7353ca0e543bc041df563f2a8ac1a37e53acf60f79a93d535c4e5997dd12a01c4afe34355be2c5d371aa768001c34de4c65dcd6b6f5f368c3b  0007-fadt.patch"
+749efa2e764006555b4fd3a8e2f6d1118ad2ea4d45acf99104a41a93cfe66dc9685f72027c17d8211e5716246c2a52322c962cf4b73b27541b69393cd57f53bb  bridge.conf"
